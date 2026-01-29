@@ -1,0 +1,281 @@
+/* =========================================================
+   RESET DASAR
+   Menghilangkan style bawaan browser
+   ========================================================= */
+* {
+    margin: 0; /* menghapus margin default */
+    padding: 0; /* menghapus padding default */
+    box-sizing: border-box; /* membuat ukuran elemen lebih konsisten */
+    font-family: "Poppins", sans-serif; /* font modern & rapi */
+}
+
+/* =========================================================
+   VARIABEL WARNA (PALET)
+   ========================================================= */
+:root {
+    --beige: #fff5d7;       /* warna utama background */
+    --coral: #ff5e6c;       /* warna aksen utama */
+    --yellow: #feb300;     /* warna highlight */
+    --pink: #ffaaab;       /* warna lembut pendukung */
+    --dark: #333333;       /* warna teks utama */
+}
+
+/* =========================================================
+   BODY
+   ========================================================= */
+body {
+    background-color: var(--beige); /* background keseluruhan */
+    color: var(--dark); /* warna teks */
+    line-height: 1.6; /* jarak antar baris */
+}
+
+/* =========================================================
+   CONTAINER UMUM
+   ========================================================= */
+.container {
+    max-width: 1100px; /* batas lebar konten */
+    margin: auto; /* posisi tengah */
+    padding: 40px 20px; /* jarak dalam */
+}
+
+/* =========================================================
+   JUDUL SETIAP SECTION
+   ========================================================= */
+.section-title {
+    text-align: center; /* teks di tengah */
+    font-size: 2rem; /* ukuran judul */
+    color: var(--coral); /* warna judul */
+    margin-bottom: 40px; /* jarak bawah */
+}
+
+/* =========================================================
+   NAVIGASI
+   ========================================================= */
+header {
+    position: sticky; /* navbar menempel */
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    background-color: #ffffff; /* background navbar */
+    display: flex; /* logo & menu sejajar */
+    justify-content: space-between; /* kiri & kanan */
+    align-items: center; /* sejajar vertikal */
+    padding: 15px 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* bayangan */
+}
+
+/* logo */
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--coral);
+}
+
+.logo span {
+    color: var(--yellow); /* warna kata "Empat" */
+}
+
+/* menu navigasi */
+.nav-links {
+    list-style: none; /* hapus bullet */
+    display: flex; /* menu sejajar */
+    gap: 25px; /* jarak menu */
+}
+
+.nav-links a {
+    text-decoration: none; /* hilangkan garis bawah */
+    color: var(--dark);
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--coral); /* warna saat hover */
+}
+
+/* =========================================================
+   HERO / BERANDA
+   ========================================================= */
+.hero-kelompok {
+    height: 100vh; /* setinggi layar */
+    background: linear-gradient(
+        135deg,
+        var(--pink),
+        var(--beige)
+    ); /* gradasi lembut */
+    display: flex;
+    align-items: center; /* tengah vertikal */
+    justify-content: center; /* tengah horizontal */
+    text-align: center;
+}
+
+.hero-overlay p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.hero-overlay h1 {
+    font-size: 3.2rem;
+    color: var(--coral);
+    margin-bottom: 15px;
+}
+
+/* tombol hero */
+.hero-buttons .btn-cek {
+    display: inline-block;
+    background-color: var(--coral);
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.hero-buttons .btn-cek:hover {
+    background-color: var(--yellow);
+    color: var(--dark);
+}
+
+/* =========================================================
+   BACKGROUND SECTION
+   ========================================================= */
+.section-container {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: var(--beige);
+}
+
+.bg-white {
+    background-color: #ffffff;
+}
+
+/* =========================================================
+   ANGGOTA KELOMPOK (CARD)
+   ========================================================= */
+.kelompok-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.kelompok-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--dark);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.kelompok-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-info h3 {
+    color: var(--coral);
+    margin-bottom: 8px;
+}
+
+/* =========================================================
+   MAKALAH / LAPORAN
+   ========================================================= */
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* PDF lebih besar */
+    gap: 30px;
+}
+
+.pdf-container {
+    height: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.content-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-cek {
+    background-color: var(--coral);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-cek:hover {
+    background-color: var(--yellow);
+    color: var(--dark);
+}
+
+/* =========================================================
+   VIDEO DOKUMENTASI
+   ========================================================= */
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.video-desc {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+    background-color: var(--coral);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* =========================================================
+   RESPONSIVE (TABLET & HP)
+   ========================================================= */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 2.3rem;
+    }
+
+    .content-wrapper {
+        grid-template-columns: 1fr; /* laporan 1 kolom */
+    }
+}
